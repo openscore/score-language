@@ -16,6 +16,8 @@
         <cs-content.revision>master</cs-content.revision>
         <cs-content.type>branch</cs-content.type>
         <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
+		<python>3.8.7.0</python>
+        <python.path>@BASEDIR@/python-lib/python-3.8.7</python.path>
     </properties>
 
     <dependencies>
@@ -257,7 +259,7 @@
                             <id>cslang</id>
                         </program>
                     </programs>
-                    <extraJvmArguments>-Dpython.path=@BASEDIR@/python-lib</extraJvmArguments>
+                    <extraJvmArguments>-Dpython.path=${python.path}</extraJvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -282,6 +284,15 @@
                                     <outputDirectory>${basedir}/target/cslang-cli/maven</outputDirectory>
                                     <destFileName>maven</destFileName>
                                 </artifactItem>
+								<artifactItem>
++                                    <groupId>com.microfocus.itom.oo</groupId>
++                                    <artifactId>python</artifactId>
++                                    <version>${python}</version>
++                                    <classifier>win</classifier>
++                                    <type>zip</type>
++                                    <outputDirectory>${basedir}/target/cslang-cli/python-lib</outputDirectory>
++                                    <destFileName>python-lib</destFileName>
+                                 </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
