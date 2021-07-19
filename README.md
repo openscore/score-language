@@ -12,7 +12,7 @@ This project includes the CLI to trigger flows.
 
 #### Getting started:
 
-###### Pre-Requisite: Java JRE >= 7
+###### Pre-Requisite: Java JRE = 8
 
 1. Download the CloudSlang CLI file named cslang-cli-with-content:
     + [Stable release](https://github.com/CloudSlang/cloud-slang/releases/latest)
@@ -43,7 +43,7 @@ Contact us at support@cloudslang.io.
 ###### Pre-Requisites:
 
 1. Maven version >= 3.0.3
-2. Java JDK version >= 7
+2. Java JDK version = 8
 
 ###### Steps
 

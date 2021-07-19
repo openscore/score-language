@@ -1,4 +1,17 @@
 # CHANGELOG
+##Version 2.0
++ DSL changes
+	+ Added a new keyword `run_id` to fetch current execution's execution_id
+	+ Out of the box function support. Functions are the ready block of codes created to prevent constant rewriting of code blocks. The list of functions available is given below
+		+ cs_regex(selection, regex, split_lines) Apply a regular expression on the selected text. Wherein, selection: content to be modified, regex: the regular expression, and split_lines (Optional): split selection into lines and apply regex on each line. If not present, apply regex on the entire selection.
+		+ cs_json_query(selection, json_path) Apply a JSON Path expression on the selected text. Wherein, selection: JSON on which the function is applied and json_path: the JSON path.
+		+ cs_xpath_query(selection, xpath) Apply the XPath expression on the selected XML. Apply the XPath expression on the selected XML. Wherein, selection: XML on which the function is applied, and xpath: the xpath query.
+	+ Support for Python 3
+	+ Support for sensitive outputs
+	+ Support for assigning ROI (return on investment) value to the navigation in flow.
++ Performance improvement
+	+ Performance optimization in execution of simple and parallel loops
+	+ Performance improvement in evaluation of code using Jython
 
 ## Version 1.0
 
