@@ -420,6 +420,24 @@
                         </executions>
                     </plugin>
                     <plugin>
+                        <groupId>io.cloudslang.tools</groupId>
+                        <artifactId>cs-content-packager-plugin</artifactId>
+                        <version>1.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>copy content dependencies</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>copy-cloudslang-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <contentFiles>${project.build.directory}/cs-content</contentFiles>
+                                    <destination>${project.build.directory}/cslang-cli/maven/repo</destination>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
                         <version>3.0.2</version>
